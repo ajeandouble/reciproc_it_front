@@ -41,7 +41,7 @@ export default class Chart extends Component {
 					series={this.chartData.series}
 					title={this.chartData.title}
 					type="bar"
-					width="600"
+					width="650"
 				/>
 			</div>
 		);

@@ -7,28 +7,41 @@
             user-select: none; /* Non-prefixed version, currently */
 }
 
-/* Our grid wrapper with a fixed height to the viewport */
+/* À grands problèmes de grandes solutions
+	https://cssgrid-generator.netlify.app/
+*/
 
-.wrapper {
+.parent {
 	display: grid;
+	grid-template-columns: 70px 100px 1fr 1.5fr 1fr 100px;
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	max-height: 100vh;
+	min-height: 100vh;
 	height: 100vh;
-	grid-template-columns: 70px 1fr;
-	gap: 10px;
 }
-
+	
+.grid-area--sidebar { grid-area: 1 / 1 / 6 / 2; }
+.grid-area--company { grid-area: 1 / 2 / 2 / 3; }
+.grid-area--swiper { grid-area: 5 / 2 / 6 / 7; background-color: #F2F2F2;}
+.grid-area--chart { grid-area: 2 / 4 / 4 / 5; }
+.grid-area--date { grid-area: 1 / 6 / 2 / 7;  }
 
 /* Sidebar */
 
 .sidebar {
 	background-color: #121C2F;
+	height: 100vh;
 }
 
 .sidebar__profile-logo {
 	width: 50px;
-	position: absolute;
+	position: relative;
 	top: 15px;
 	left: 12px;
 }
+
 .sidebar__profile-logo:hover {
 	stroke: blue;
 	cursor: pointer;
@@ -38,7 +51,7 @@
 	width: 50px;
 	position: absolute;
 	left: 8px;
-	bottom: 60px;
+	bottom: 100px;
 	cursor: pointer;
 }
 
@@ -47,23 +60,18 @@
 	cursor: pointer;
 }
 
-/* Content */
+/* Upper divs */ 
 
-.content {
-	grid-column-start: 2;
-	max-width: 100vh;
-	min-width: 100vh;
+.company-logo {
 }
 
-.content .company-logo {
-	position: fixed;
-	top: 0;
-}
-
-.content .date-widget {
-	position: absolute;
+.date-widget {
+	width: 150%; /* a bit dirty */
+	position: relative;
+	color: black;
 	right: 5rem;
-	top: 4.5rem;
+	text-overflow: "";
+	top: 2.5rem;
 	font-size: 120%;
 	text-align: center;
 }
@@ -71,17 +79,15 @@
 /* Carousel */
 
 .swiper {
-	position: relative;
-	z-index: 1000;
-	top: 75%;
-	height: 20%;
-	width: calc(100vw - 80px);
+	position: absolute;
+	top: -10%;
+	height : 100%;
 	background-color: #F2F2F2;
 }
 
 .swiper-slide {
 	background-color:white;
-	position: relative;
+	/* position: relative; */
 	top: 5%;
 	max-height: 90%;
 	width: 100%;
@@ -90,7 +96,7 @@
 
 .swiper-slide {
 	border: 1px solid #C4C4C4;
-	position: relative;
+	/* position: relative; */
 }
 
 .swiper-slide__add {
@@ -119,8 +125,6 @@
 /* Chart */
 
 .chart {
-	position: absolute;
-	margin-left: 30%;
-	margin-right: 30%;
-	top: 20%;
+	position: relative;
+	top: -15%;
 }

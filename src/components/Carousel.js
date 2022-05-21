@@ -25,7 +25,7 @@ const SlideContent = ({ user }) => {
 
 	return (
 		<div
-			className="swiper-slide--content"
+			className="swiper-slide--content noselect"
 			style={{ backgroundImage: `url('${user.image}')` }}
 		>
 			<br />
