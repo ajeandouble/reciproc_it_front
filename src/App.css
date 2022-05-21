@@ -1,0 +1,112 @@
+.wrapper {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 70px 1fr;
+	gap: 10px;
+}
+
+.sidebar {
+	/* position: absolute;
+	width: 70px;
+	height: 100vh; */
+	background-color: #121C2F;
+}
+
+.sidebar__profile-logo {
+	width: 50px;
+	position: absolute;
+	top: 15px;
+	left: 12px;
+}
+.sidebar__profile-logo:hover {
+	stroke: blue;
+	cursor: pointer;
+}
+
+.sidebar__settings-logo {
+	width: 50px;
+	position: absolute;
+	left: 8px;
+	bottom: 60px;
+	cursor: pointer;
+}
+
+.sidebar__settings-logo:hover {
+	stroke: blue;
+	cursor: pointer;
+}
+
+.content {
+	grid-column-start: 2;
+	max-width: 100vh;
+	min-width: 100vh;
+}
+.content .company-logo {
+	position: fixed;
+	top: 0;
+}
+
+.content .date-widget {
+	position: absolute;
+	right: 5rem;
+	top: 4.5rem;
+	font-size: 120%;
+	text-align: center;
+}
+
+/* Carousel */
+
+.swiper {
+	position: relative;
+	z-index: 1000;
+	top: 75%;
+	height: 20%;
+	width: calc(100vw - 80px);
+	background-color: #F2F2F2;
+}
+
+.swiper-slide {
+	background-color:white;
+	position: relative;
+	top: 5%;
+	max-height: 90%;
+	width: 100%;
+	text-align: center;
+}
+
+.swiper-slide {
+	border: 1px solid #C4C4C4;
+	position: relative;
+}
+
+.swiper-slide__add {
+	color:#C4C4C4;
+	position: relative;
+	top: 25%;
+	font-size: 4rem;
+}
+
+.swiper-slide__add:hover { color: grey; cursor: pointer; }
+
+.swiper-slide--content {
+	font-weight: bolder;
+	letters-spacing: 120%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.swiper-slide--content span {
+	color: white;
+	mix-blend-mode: difference;
+}
+
+/* Chart */
+
+.chart {
+	position: absolute;
+	margin-left: 30%;
+	margin-right: 30%;
+	top: 20%;
+}
