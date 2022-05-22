@@ -120,8 +120,10 @@
 	background-position: center;
 	background-size: cover;
 	opacity: 0.8;
+}
 
-	filter: blur(1px);
+.swiper-slide--content img { 
+	filter: blur(1px);	
 	-webkit-filter: blur(1px);
 }
 

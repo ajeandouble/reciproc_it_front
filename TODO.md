@@ -7,4 +7,4 @@
 [X] Clean code (separrate in components *(* and helpers? *)*)
 [X] Use relative positionning instead of magic px values
 [X] Clean uneeded packages and assets
-[X] Better contrast for text readibility. No-clip etc.
+[X] Better contrast for text readibility. Blur and opacity.
