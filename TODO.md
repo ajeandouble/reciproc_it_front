@@ -1,10 +1,10 @@
-# TODO LIST
+# TODO
 
-[ ] Use real world population?
+[X] Check for bugs
 [X] Unfocusable text
+[X] Delete grid ticks, labels etc.
 [X] Use clean grid system instead of dirty positioning
 [X] Clean code (separrate in components *(* and helpers? *)*)
 [X] Use relative positionning instead of magic px values
-[X] Check for bugs
 [X] Clean uneeded packages and assets
-[ ] Better contrast for text readibility. No-clip etc.
+[X] Better contrast for text readibility. No-clip etc.

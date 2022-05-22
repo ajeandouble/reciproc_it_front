@@ -7,9 +7,7 @@
             user-select: none; /* Non-prefixed version, currently */
 }
 
-/* À grands problèmes de grandes solutions
-	https://cssgrid-generator.netlify.app/
-*/
+/* Grid layout */
 
 .parent {
 	display: grid;
@@ -24,9 +22,13 @@
 	
 .grid-area--sidebar { grid-area: 1 / 1 / 6 / 2; }
 .grid-area--company { grid-area: 1 / 2 / 2 / 3; }
-.grid-area--swiper { grid-area: 5 / 2 / 6 / 7; background-color: #F2F2F2;}
+.grid-area--swiper {
+	grid-area: 5 / 2 / 6 / 7;
+	background-color: #F2F2F2;
+}
 .grid-area--chart { grid-area: 2 / 4 / 4 / 5; }
 .grid-area--date { grid-area: 1 / 6 / 2 / 7;  }
+
 
 /* Sidebar */
 
@@ -60,6 +62,7 @@
 	cursor: pointer;
 }
 
+
 /* Upper divs */ 
 
 .company-logo {
@@ -75,6 +78,7 @@
 	font-size: 120%;
 	text-align: center;
 }
+
 
 /* Carousel */
 
@@ -115,12 +119,17 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	opacity: 0.8;
+
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
 }
 
 .swiper-slide--content span {
 	color: white;
 	mix-blend-mode: difference;
 }
+
 
 /* Chart */
 

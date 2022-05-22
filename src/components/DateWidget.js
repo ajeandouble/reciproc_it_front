@@ -5,12 +5,15 @@ import { useEffect, useState } from 'react';
 
 export default function DateWidget() {
 	const [d, setD] = useState(new Date());
-	const day = d.getDay();
+	const day = d.getDate();
 	const month = d.getMonth();
 	const yr = d.getFullYear();
 	const hrs = d.getHours();
 	const min = d.getMinutes();
 	const sec = d.getSeconds();
+	const dayNames = [
+		'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+	]
 	const monthNames = [
 		'January',
 		'February',

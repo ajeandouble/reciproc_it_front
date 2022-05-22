@@ -1,4 +1,4 @@
-/* We could probably configure webpack to import some svg assets directly but let's keep it simple */
+/* We could configure webpack to import some svg assets directly but let's keep it simple */
 
 const profileLogo = (
 	<svg
